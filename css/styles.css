@@ -1,0 +1,14 @@
+/*
+Author: Chinatsu Kawakami
+Create Date: 2017-09-13
+Modified Date: 2017-09-13
+Description : This is the stylesheet.
+*/
+
+.container{
+	font-family: 'Courier New',sans-serif;
+	width: 300px;
+	margin: 30px auto 0;
+	text-align: center;
+	font-weight: bold;
+}
