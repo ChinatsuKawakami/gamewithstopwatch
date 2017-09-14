@@ -21,6 +21,9 @@ Description : This is the stylesheet.
 	height: 60px;
 	line-height: 60px;
 }
+#result.standby{
+	opacity: 0.5;
+}
 /*When the user got a result that the stopped time is close to 5 seconds*/
 #result.perfect{
    background: #FA5858;
