@@ -16,8 +16,14 @@ var stop = document.getElementById('stop');
 var result = document.getElementById('result');
 
 var startTime;
+var isStarted = false;
+var startTime;
 
-start.addEventListener('click',function(){
+start.addEventListener('click',function(){ 
+	if(isStarted===true){
+		return;
+	}
+   isStarted = true;
    startTime = Date.now();
    this.className = 'pushed';
    stop.className = '';
@@ -26,7 +32,10 @@ start.addEventListener('click',function(){
 stop.addEventListener('click',function(){
    var elapsedTime;
    var diff;
-
+   if(isStarted===false){
+		return;
+	}
+   isStarted = false;
    elapsedTime = (Date.now()-startTime) / 1000;
    result.textContent = elapsedTime.toFixed(3);
    this.className = 'pushed';
