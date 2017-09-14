@@ -6,21 +6,24 @@ Description : This is the main.js file
 */
 
 
-(funtion (){
+(function (){
 'use strict';
 
-var start = doccument.getElementById('start');
+var start = document.getElementById('start');
 
-var stop = doccument.getElementById('stop');
+var stop = document.getElementById('stop');
 
-var result = doccument.getElementById('result');
+var result = document.getElementById('result');
 
 var startTime;
 
 start.addEventListener('click',function(){
    startTime = Date.now();
-   
 });
 
-
+stop.addEventListener('click',function(){
+   var elapsedTime;
+   elapsedTime = (Date.now()-startTime) / 1000;
+   result.textContent = elapsedTime.toFixed(3);
+   });
 })();
